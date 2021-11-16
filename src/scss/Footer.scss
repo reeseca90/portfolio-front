@@ -1,0 +1,18 @@
+@use '_variables' as var;
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  text-align: center;
+  width: 100vw;
+  background-color: var.$outer-bg-color;
+}
+
+.footerPage {
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 12px;
+}

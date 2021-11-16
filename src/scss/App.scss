@@ -1,0 +1,23 @@
+@use './variables' as var;
+
+.App {
+  text-align: center;
+}
+
+#contentArea {
+  box-sizing: border-box;
+  background-color: var.$content-bg-color;
+  text-align: center;
+  width: 100vw;
+  height: calc(100vh - 125px);
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+
+.toLeft {
+  margin-right: auto;
+}
+
+.toRight {
+  margin-left: auto;
+}

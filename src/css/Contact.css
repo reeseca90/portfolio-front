@@ -1,0 +1,10 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=Contact.css.map */
