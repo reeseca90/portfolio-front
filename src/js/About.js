@@ -19,7 +19,13 @@ const About = (props) => {
         was responsible for the planning and execution of all electrical maintenance, as well as the training and development of junior personnel.
       </p>
       <p>
-        
+        After my tour aboard CVN-74, I transferred to Nuclear Field 'A' School where I taught new students basic electrical theory and fundamentals, as well as&nbsp;
+        serving as a section adviser to multiple classes. My last role in the Navy was electrical class director, where I led twelve other sea-returnee sailors&nbsp;
+        responsible for all Electrician's Mate students enrolled at the school, including their technical training, military training, and personal development.
+      </p>
+      <p>
+        In my free time, I enjoy running, astronomy, and some video games; you can see some of them in my blog posts. However, most of my free time is&nbsp;
+        spent with my family.
       </p>
     </div>
   )

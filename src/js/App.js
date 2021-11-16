@@ -1,5 +1,6 @@
 import '../css/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import Nav from '../js/Nav';
 import Footer from '../js/Footer';
 import Home from '../js/Home';
@@ -17,6 +18,7 @@ function App() {
         <Nav />
         <section id='contentArea'>
           <Routes>
+            <Route exact path='/' element={<Home />} />     
             <Route exact path='/home' element={<Home />} />
             <Route exact path='/about' element={<About />} />
             <Route exact path='/projects' element={<Projects />} />
