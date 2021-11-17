@@ -2,8 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import moment from 'moment';
+import { useNavigate } from "react-router";
 
 const ReaderOnePost = (props) => {
+  const navigate = useNavigate();
+
   let location = useLocation().pathname.split('/');
   let id = location[4];
 
@@ -12,7 +15,7 @@ const ReaderOnePost = (props) => {
   const [comCont, setComCont] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blog/view/posts/' + id)
+    axios.get('/api/blog/view/posts/' + id)
       .then(data => setOnePost(data.data))
       .catch(err => console.log(err))
   }, []);
@@ -26,13 +29,13 @@ const ReaderOnePost = (props) => {
   }
 
   const postComment = () => {
-    const postURL = 'http://localhost:3001/blog/view/posts/' + id;
+    const postURL = '/api/blog/view/posts/' + id;
 
     axios.post(postURL, { name: comUser, content: comCont })
      .then(() => {
       setComUser('');
       setComCont('');
-      axios.get('http://localhost:3001/blog/view/posts/' + id)
+      axios.get('/api/blog/view/posts/' + id)
         .then(data => setOnePost(data.data))
         .catch(err => console.log(err))
      });

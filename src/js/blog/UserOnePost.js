@@ -14,7 +14,7 @@ const UserOnePost = (props) => {
   const tokenHeader = { headers: { 'Authorization': `Bearer ${props.token}` }};
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blog/create/posts/' + id, tokenHeader)
+    axios.get('/api/blog/create/posts/' + id, tokenHeader)
       .then(data => setOnePost(data.data))
       .catch(err => console.log(err))
   }, []);
@@ -28,25 +28,25 @@ const UserOnePost = (props) => {
   }
 
   const postComment = () => {
-    const postURL = 'http://localhost:3001/blog/create/posts/' + id;
+    const postURL = '/api/blog/create/posts/' + id;
 
     axios.post(postURL, { name: comUser, content: comCont }, tokenHeader)
      .then(() => {
         setComUser('');
         setComCont('');
-        axios.get('http://localhost:3001/blog/create/posts/' + id, tokenHeader)
+        axios.get('/api/blog/create/posts/' + id, tokenHeader)
           .then(data => setOnePost(data.data))
           .catch(err => console.log(err));
      });
   }
 
   const deleteComment = (e) => { 
-    axios.post('http://localhost:3001/blog/create/posts/' + id, 
+    axios.post('/api/blog/create/posts/' + id, 
       { 
         commentID: e.target.id
       }, tokenHeader)
      .then(() => {
-        axios.get('http://localhost:3001/blog/create/posts/' + id, tokenHeader)
+        axios.get('/api/blog/create/posts/' + id, tokenHeader)
           .then(data => setOnePost(data.data))
           .catch(err => console.log(err));
      });
@@ -79,11 +79,13 @@ const UserOnePost = (props) => {
                   <p>From: {comment.name}<br />
                   {moment(comment.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
                   {commentContent.map((para) => {
+                    let i = 0;
                     if (para!=='') {
                       return (
-                        <p>{para}</p>
+                        <p key={i}>{para}</p>
                       )
                     }
+                    i++;
                   })}
                   <button type='button' id={comment._id} onClick={deleteComment}>Delete Comment</button>
                 </div>

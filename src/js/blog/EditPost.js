@@ -16,7 +16,7 @@ const CreatePost = (props) => {
 
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blog/create/posts/' + id + '/edit' , tokenHeader)
+    axios.get('/api/blog/create/posts/' + id + '/edit' , tokenHeader)
       .then((res) => {
         setTitle(res.data.post.title);
         setCont(res.data.post.content);
@@ -26,7 +26,7 @@ const CreatePost = (props) => {
   }, []);
 
   const submitEdit = () => {
-    axios.post('http://localhost:3001/blog/create/posts/' + id + '/edit', { 
+    axios.post('/api/blog/create/posts/' + id + '/edit', { 
       createDate: Date.now, 
       title: title, 
       content: cont, 
@@ -39,7 +39,7 @@ const CreatePost = (props) => {
   }
 
   const submitDelete = () => {
-    axios.post('http://localhost:3001/blog/create/posts/' + id + '/edit', { 
+    axios.post('/api/blog/create/posts/' + id + '/edit', { 
       deletePostID: _id
     }, tokenHeader)
       .then(() => {

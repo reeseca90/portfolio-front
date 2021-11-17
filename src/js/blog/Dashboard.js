@@ -9,7 +9,7 @@ const Dashboard = (props) => {
   const tokenHeader = { headers: { 'Authorization': `Bearer ${props.token}` }};
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blog/create/posts', tokenHeader)
+    axios.get('/api/blog/create/posts', tokenHeader)
       .then(data => setPosts([...data.data.posts]))
       .catch(err => console.log(err))
   }, []);

@@ -12,7 +12,7 @@ const CreatePost = (props) => {
   const tokenHeader = { headers: { 'Authorization': `Bearer ${props.token}` }};
 
   const submitPost = () => {
-    axios.post('http://localhost:3001/blog/create/posts/new/', { 
+    axios.post('/api/blog/create/posts/new/', { 
       createDate: Date.now, 
       title: title, 
       content: cont, 

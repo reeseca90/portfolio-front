@@ -17,7 +17,7 @@ const Login = (props) => {
   }
 
   async function loginUser(credentials) {
-    return fetch('http://localhost:3001/blog/login', {
+    return fetch('/api/blog/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

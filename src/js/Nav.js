@@ -4,8 +4,8 @@ import '../css/Nav.css';
 const Nav = (props) => {
   return (
     <header>
-      <div class='navPage'>
-        <span class='logo toLeft'>placeholder for logo</span>
+      <div className='navPage'>
+        <span className='logo toLeft'>placeholder for logo</span>
         <Link to='/home' className='toRight'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/projects'>Projects</Link>

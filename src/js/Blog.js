@@ -17,7 +17,7 @@ const Blog = (props) => {
   })
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blog/view/posts')
+    axios.get('/api/blog/view/posts')
       .then(data => setPosts([...data.data.posts]))
       .catch(err => console.log(err))
   }, []);

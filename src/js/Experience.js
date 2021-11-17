@@ -6,7 +6,7 @@ const Experience = (props) => {
   return (
     <div className='experienceList'>
       <h1>My Experience</h1>
-      <a href='http://localhost:3001/experience/resume'>Download my Resume</a>
+      <a href='/api/resume' download>Download my Resume</a>
       <div>
         College and Self-Learning; applications created<br />
         <Link to='/projects'>Projects I've created</Link>
