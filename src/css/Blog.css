@@ -1,3 +1,99 @@
-/*# sourceMappingURL=Blog.css.map */
+.blogPage {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.userDashList {
+  display: flex;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.readerList {
+  display: flex;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.login {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+.login button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.viewPostCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+.viewPostCard form {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.viewPostCard form input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+.viewPostCard form button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.createPostCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+.createPostCard form {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.createPostCard form input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+.createPostCard form button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*# sourceMappingURL=Blog.css.map */

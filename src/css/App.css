@@ -7,7 +7,7 @@
   background-color: lightskyblue;
   text-align: center;
   width: 100vw;
-  height: calc(100vh - 125px);
+  min-height: calc(100vh - 125px);
   border-top: 1px solid black;
   padding-top: 20px;
 }

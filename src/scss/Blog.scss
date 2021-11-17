@@ -1,0 +1,99 @@
+@use '_variables' as var;
+
+.blogPage {
+  display: flex;
+  flex-direction: column;
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.userDashList {
+  display: flex;
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.readerList {
+  display: flex;
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.login {
+  width: (var.$page-max-width * .75);
+  margin-left: auto;
+  margin-right: auto;
+  input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  }
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+}
+
+.viewPostCard {
+  display: flex;
+  flex-direction: column;
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  form {
+    width: (var.$page-max-width * .75);
+    margin-left: auto;
+    margin-right: auto;
+    input {
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+    }
+    button {
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.createPostCard {
+  display: flex;
+  flex-direction: column;
+  max-width: var.$page-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  form {
+    width: var.$page-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    input {
+      margin-left: auto;
+      margin-right: auto;
+      width: (var.$page-max-width * .75);
+    }
+    button {
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

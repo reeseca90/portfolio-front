@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import moment from 'moment';
 
 const ReaderOnePost = (props) => {
   let location = useLocation().pathname.split('/');
@@ -36,22 +37,38 @@ const ReaderOnePost = (props) => {
         .catch(err => console.log(err))
      });
   }
-
+  
   if (onePost.post != null ) {
+    const content = onePost.post.content.split(/\n/);
+
     return(
-      <div>
-        <Link to='/blog/view/posts' className='link'>Reader All Posts</Link>
+      <div className='viewPostCard'>
         <h2>{onePost.post.title}</h2>
-        <p>{onePost.post.createDate}</p>
-        <p>{onePost.post.content}</p>
-        <h3>comments</h3>
+        <p>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+        {content.map((para) => {
+          if (para!=='') {
+            return (
+              <p>{para}</p>
+            )
+          }
+        })}
+        <h3>Comments</h3>
         <ul>
           {onePost.comments.map((comment) => {
+            const commentContent = comment.content.split(/\n/);
+
             return (
               <li key={comment._id}>
                 <div className='commentCard'>
-                  <p>{comment.name}, {comment.createDate}</p>
-                  <p>{comment.content}</p>
+                  <p>From: {comment.name}<br />
+                  {moment(comment.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+                  {commentContent.map((para) => {
+                    if (para!=='') {
+                      return (
+                        <p>{para}</p>
+                      )
+                    }
+                  })}
                 </div>
               </li>
             );

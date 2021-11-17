@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router';
+import moment from 'moment';
 
 const Blog = (props) => {
   const navigate = useNavigate();
@@ -23,12 +24,15 @@ const Blog = (props) => {
 
   return (
     <div className='blogPage'>
-      <h1>Blog</h1>
+      <h1>Craig's Blog</h1>
       <ul>
         {posts.map((post) => {
           if (post.published) {
             return (
-              <li key={post._id}><Link to={post._id}>{post.title}</Link>, {post.createDate}</li>
+              <li key={post._id} className='readerList'>
+                <span><Link to={post._id}>{post.title}</Link></span>
+                <span>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</span>
+              </li>
             );
           }
         })}

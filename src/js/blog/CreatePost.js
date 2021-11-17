@@ -41,7 +41,7 @@ const CreatePost = (props) => {
   }
 
   return (
-    <div>
+    <div className='createPostCard'>
       <Link to='/blog/create/posts' className='link'>User All Posts</Link>
       <h2>Create new post: </h2>
       <form>

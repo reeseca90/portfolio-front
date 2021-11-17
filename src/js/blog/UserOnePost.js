@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import moment from 'moment';
 
 const UserOnePost = (props) => {
   let location = useLocation().pathname.split('/');
@@ -52,21 +53,38 @@ const UserOnePost = (props) => {
   }
 
   if (onePost.post != null ) {
+    const content = onePost.post.content.split(/\n/);
+
     return(
-      <div>
-        <Link to='/blog/create/posts' className='link'>User All Posts</Link>
+      <div className='viewPostCard'>
+        <Link to='/blog/create/posts' className='link'>Back to All Posts</Link>
         <h2>{onePost.post.title}</h2>
-        <p>{onePost.post.createDate}</p>
-        <p>{onePost.post.content}</p>
+        <p>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+        {content.map((para) => {
+          if (para!=='') {
+            return (
+              <p>{para}</p>
+            )
+          }
+        })}
         <Link to={'/blog/create/posts/' + id + '/edit'} className='link'>Edit Post</Link>
-        <h3>comments</h3>
+        <h3>Comments</h3>
         <ul>
           {onePost.comments.map((comment) => {
+            const commentContent = comment.content.split(/\n/);
+            
             return (
               <li key={comment._id}>
                 <div className='commentCard'>
-                  <p>{comment.name}, {comment.createDate}</p>
-                  <p>{comment.content}</p>
+                  <p>From: {comment.name}<br />
+                  {moment(comment.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+                  {commentContent.map((para) => {
+                    if (para!=='') {
+                      return (
+                        <p>{para}</p>
+                      )
+                    }
+                  })}
                   <button type='button' id={comment._id} onClick={deleteComment}>Delete Comment</button>
                 </div>
               </li>

@@ -39,7 +39,7 @@ const Login = (props) => {
 
 
   return (
-    <form method='POST'>
+    <form method='POST' className='login'>
       <label htmlFor='username'>Username: </label>
       <input type='text' name='username' required={true} onChange={handleUsername} value={username} />
 

@@ -4,7 +4,7 @@ import axios from "axios";
 
 const CreatePost = (props) => {
   let location = useLocation().pathname.split('/');
-  let id = location[3];
+  let id = location[4];
   const navigate = useNavigate();
 
   const [title, setTitle] = useState('');
@@ -34,7 +34,7 @@ const CreatePost = (props) => {
       _id: _id
     }, tokenHeader)
       .then(() => {
-        navigate('/create/posts/' + id);
+        navigate('/blog/create/posts/' + id);
       });
   }
 
@@ -43,7 +43,7 @@ const CreatePost = (props) => {
       deletePostID: _id
     }, tokenHeader)
       .then(() => {
-        navigate('/create/posts/');
+        navigate('/blog/create/posts/');
       });
   }
 
@@ -65,11 +65,11 @@ const CreatePost = (props) => {
   }
 
   return (
-    <div>
+    <div className='createPostCard'>
       <Link to='/blog/create/posts' className='link'>User All Posts</Link>
       <h2>Edit post post: </h2>
-      <button type='button' onClick={submitDelete}>Delete Post</button>
       <form>
+      <button type='button' onClick={submitDelete}>Delete Post</button>
         <label htmlFor='title'>Title: </label>
         <input type='text' name='title' required={true} onChange={handleTitle} value={title} />
 
