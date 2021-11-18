@@ -46,8 +46,8 @@ const ReaderOnePost = (props) => {
 
     return(
       <div className='viewPostCard'>
-        <h2>{onePost.post.title}</h2>
-        <p>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+        <h1>{onePost.post.title}</h1>
+        <p className='date'>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
         {content.map((para) => {
           if (para!=='') {
             return (
@@ -78,7 +78,7 @@ const ReaderOnePost = (props) => {
           })}
         </ul>
         <h4>Add new comment</h4>
-        <form>
+        <form className='newComment'>
           <label htmlFor='name'>Name: </label>
           <input type='text' name='name' required={true} onChange={commentUser} value={comUser} />
           <label htmlFor='content'>Comment: </label>

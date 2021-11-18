@@ -9,7 +9,7 @@ const Home = (props) => {
       <h1>Hi, I'm Craig</h1>
 
       <div>
-        <img src={profPic} alt="Craig" />
+        <img className='floatRight' src={profPic} alt="Craig" />
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
           I'm a full-stack developer looking for new opportunities, either fully-remote or in the Charleston, SC metro area.
         </p>

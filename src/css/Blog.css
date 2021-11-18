@@ -5,15 +5,28 @@
   margin-left: auto;
   margin-right: auto;
   gap: 20px;
+  text-align: center;
 }
 
 ul {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 600px;
   padding: 0;
 }
 
 li {
   list-style-type: none;
   padding: 5px;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
 
 .userDashList {
@@ -48,6 +61,11 @@ li {
   width: 100px;
 }
 
+.link {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .viewPostCard {
   display: flex;
   flex-direction: column;
@@ -55,6 +73,11 @@ li {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+}
+.viewPostCard .date {
+  text-align: center;
+  font-size: 14px;
+  margin-top: -40px;
 }
 .viewPostCard form {
   width: 600px;
@@ -66,13 +89,9 @@ li {
   margin-right: auto;
   width: 200px;
 }
-.viewPostCard form button {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .createPostCard {
+  text-align: center;
   display: flex;
   flex-direction: column;
   max-width: 800px;
@@ -94,6 +113,34 @@ li {
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.newComment {
+  text-align: center;
+}
+.newComment button {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(30, 30, 30, 0.7);
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #505050;
+}
+
+button:active {
+  transform: translateY(1px);
 }
 
 /*# sourceMappingURL=Blog.css.map */

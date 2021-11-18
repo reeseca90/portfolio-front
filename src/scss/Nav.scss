@@ -17,12 +17,12 @@ header {
   align-items: center;
   width: 100%;
   height: 75px;
-  a {
+  .highlight {
     text-decoration: none;
     padding: 5px;
     border-radius: 50%;
   }
-  a:hover {
+  .highlight:hover {
     background-image: radial-gradient(ellipse at center, var.$nav-grad-color, var.$content-bg-color);
   }
   max-width: var.$page-max-width;
@@ -41,6 +41,10 @@ header {
   .desc {
     font-size: 14px;
   }
+}
+
+#logoLink:hover {
+  color: var.$textcolor;
 }
 
 #planet {
@@ -73,6 +77,6 @@ header {
     clip: rect(22px, 45px, 45px, 0px);
   }
   .planet-bg {
-    background: radial-gradient(circle at center, rgb(40, 40, 40), rgb(0, 0, 0) 90%);
+    background: radial-gradient(circle at center, rgb(40, 40, 40), rgb(0, 0, 0) 80%);
   }
 }

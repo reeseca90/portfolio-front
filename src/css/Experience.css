@@ -1,8 +1,17 @@
 .experienceList {
   display: flex;
   flex-direction: column;
+  max-width: 800px;
   gap: 20px;
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: calc(100vh + 100px);
+}
+.experienceList a {
+  text-align: center;
+}
+.experienceList h3 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=Experience.css.map */

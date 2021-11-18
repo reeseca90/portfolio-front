@@ -38,4 +38,12 @@ h1 {
   clear: both;
 }
 
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
 /*# sourceMappingURL=App.css.map */

@@ -7,15 +7,28 @@
   margin-left: auto;
   margin-right: auto;
   gap: 20px;
+  text-align: center;
 }
 
 ul {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: (var.$page-max-width * .75);
   padding: 0;
 }
 
 li {
   list-style-type: none;
   padding: 5px;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
 
 .userDashList {
@@ -50,6 +63,11 @@ li {
   }
 }
 
+.link {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .viewPostCard {
   display: flex;
   flex-direction: column;
@@ -57,6 +75,11 @@ li {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  .date {
+    text-align: center;
+    font-size: 14px;
+    margin-top: -40px;
+  }
   form {
     width: (var.$page-max-width * .75);
     margin-left: auto;
@@ -66,15 +89,11 @@ li {
       margin-right: auto;
       width: 200px;
     }
-    button {
-      width: 100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 }
 
 .createPostCard {
+  text-align: center;
   display: flex;
   flex-direction: column;
   max-width: var.$page-max-width;
@@ -96,4 +115,30 @@ li {
       margin-right: auto;
     }
   }
+}
+
+.newComment {
+  text-align: center;
+  button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid var.$content-bg-color;
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+button:hover {
+  background-color: rgb(80, 80, 80);
+}
+button:active {
+  transform: translateY(1px);
 }

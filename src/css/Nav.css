@@ -19,12 +19,12 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-.navPage a {
+.navPage .highlight {
   text-decoration: none;
   padding: 5px;
   border-radius: 50%;
 }
-.navPage a:hover {
+.navPage .highlight:hover {
   background-image: radial-gradient(ellipse at center, rgba(138, 138, 138, 0.45), rgba(30, 30, 30, 0.7));
 }
 
@@ -39,6 +39,10 @@ header {
 }
 .nameArea .desc {
   font-size: 14px;
+}
+
+#logoLink:hover {
+  color: white;
 }
 
 #planet {
@@ -72,7 +76,7 @@ header {
   clip: rect(22px, 45px, 45px, 0px);
 }
 #planet .planet-bg {
-  background: radial-gradient(circle at center, #282828, black 90%);
+  background: radial-gradient(circle at center, #282828, black 80%);
 }
 
 /*# sourceMappingURL=Nav.css.map */

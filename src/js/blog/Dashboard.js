@@ -1,3 +1,4 @@
+import '../../css/Blog.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -15,7 +16,7 @@ const Dashboard = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className='blogPage'>
       <h1>Blog Page Dashboard</h1>
       <Link to='/blog/create/posts/new' className='dashLink'>Create New Post</Link>
 
@@ -23,8 +24,8 @@ const Dashboard = (props) => {
         {posts.map((post) => {
           return (
             <li key={post._id} className='userDashList'>
-              <span><Link to={post._id}>{post.title}</Link>,&nbsp;</span>
-              <span>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")},&nbsp;</span>
+              <span><Link to={post._id}>{post.title}</Link>&nbsp;</span>
+              <span>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}&nbsp;</span>
               <span>Published: {post.published ? 'Yes' : 'No'}</span>
             </li>
           );
