@@ -9,6 +9,7 @@ header {
 }
 
 .navPage {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -20,11 +21,58 @@ header {
 }
 .navPage a {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
 }
 .navPage a:hover {
   background-image: radial-gradient(ellipse at center, rgba(138, 138, 138, 0.45), rgba(30, 30, 30, 0.7));
+}
+
+.nameArea {
+  margin-top: 20px;
+  margin-left: 5px;
+  float: right;
+}
+.nameArea .name {
+  font-size: 28px;
+  font-weight: bolder;
+}
+.nameArea .desc {
+  font-size: 14px;
+}
+
+#planet {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+  transform: rotateZ(-15deg);
+}
+#planet .rings {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse farthest-side at center, rgba(0, 0, 0, 0) 50%, black 55%, #141414 75%, black 90%, rgba(0, 0, 0, 0) 100%);
+  transform: rotateX(75deg);
+}
+#planet .planet {
+  background: green;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 27px;
+  left: 27px;
+  border-radius: 50%;
+}
+#planet .top {
+  clip: rect(0px, 45px, 22px, 0px);
+}
+#planet .bottom {
+  clip: rect(22px, 45px, 45px, 0px);
+}
+#planet .planet-bg {
+  background: radial-gradient(circle at center, #282828, black 90%);
 }
 
 /*# sourceMappingURL=Nav.css.map */

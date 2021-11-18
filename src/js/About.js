@@ -8,7 +8,9 @@ const About = (props) => {
 
       <p>&nbsp;&nbsp;&nbsp;&nbsp;
         I am a full-stack developer with a long-time passion for learning new things. I have always had an interest in computers and technology, and enjoy&nbsp;
-        the problem-solving aspect of development.
+        the problem-solving aspect of development. I first started working with code in high school on HTML, CSS, and VisualBasic. In 2020, I decided to&nbsp;
+        pursue development as a job, and began working with HTML, CSS, JavaScript, and Java. I've since added some frameworks to my stack, such as React and &nbsp;
+        Node.js, and Express, and have worked with APIs and tech from Google, AWS, and MongoDB.
       </p>
 
       <p>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -23,8 +25,8 @@ const About = (props) => {
       </p>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;
         After my tour aboard CVN-74, I transferred to Nuclear Field 'A' School where I taught new students basic electrical theory and fundamentals, as well as&nbsp;
-        serving as a section adviser to multiple classes. My last role in the Navy was electrical class director, where I led twelve other sea-returnee sailors&nbsp;
-        responsible for all Electrician's Mate students enrolled at the school, including their technical training, military training, and personal development.
+        serving as a section adviser to multiple classes. After being promoted to Chief Petty Officer, I served as electrical class director, where I led twelve other sea-returnee sailors&nbsp;
+        who were responsible for all Electrician's Mate students enrolled at the school, including their technical training, military training, and personal development.
       </p>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;
         In my free time, I enjoy running, astronomy, and some video games; you can see some of what I'm up to in my blog posts.

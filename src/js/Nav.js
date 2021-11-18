@@ -5,7 +5,17 @@ const Nav = (props) => {
   return (
     <header>
       <div className='navPage'>
-        <span className='logo toLeft'>placeholder for logo</span>
+        <div className='logo toLeft'>
+          <div id='planet'>
+            <div class='planet top planet-bg'></div>
+            <div class='rings'></div>
+            <div class='planet bottom planet-bg'></div>
+          </div>
+          <div className='nameArea'>
+            <div className='name'>Craig Reese</div>
+            <div className='desc'>Full-Stack Web Developer</div>
+          </div>
+        </div>
         <Link to='/home' className='toRight'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/projects'>Projects</Link>

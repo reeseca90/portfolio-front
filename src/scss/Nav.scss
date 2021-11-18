@@ -11,6 +11,7 @@ header {
 }
 
 .navPage {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,7 +19,7 @@ header {
   height: 75px;
   a {
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
   }
   a:hover {
@@ -29,3 +30,49 @@ header {
   margin-right: auto;
 }
 
+.nameArea {
+  margin-top: 20px;
+  margin-left: 5px;
+  float: right;
+  .name {
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  .desc {
+    font-size: 14px;
+  }
+}
+
+#planet {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+  transform: rotateZ(-15deg);
+  .rings {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse farthest-side at center, rgba(0, 0, 0, 0) 50%, black 55%, rgb(20, 20, 20) 75%, black 90%, rgba(0, 0, 0, 0) 100%);
+    transform: rotateX(75deg);
+  }
+  .planet {
+    background: green;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    border-radius: 50%;
+  }
+  .top {
+    clip: rect(0px, 45px, 22px, 0px);
+  }
+  .bottom {
+    clip: rect(22px, 45px, 45px, 0px);
+  }
+  .planet-bg {
+    background: radial-gradient(circle at center, rgb(40, 40, 40), rgb(0, 0, 0) 90%);
+  }
+}
