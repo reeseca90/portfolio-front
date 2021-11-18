@@ -7,3 +7,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+img {
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  float: right;
+  border-radius: 50%;
+  border: 5px solid var.$outer-bg-color;
+  margin: 25px;
+}

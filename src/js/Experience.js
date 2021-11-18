@@ -8,7 +8,7 @@ const Experience = (props) => {
       <h1>My Experience</h1>
       <a href='/api/resume' download>Download my Resume</a>
       <div>
-        College and Self-Learning; applications created<br />
+        College and Self-Learning;&nbsp;
         <Link to='/projects'>Projects I've created</Link>
       </div>
       <div>

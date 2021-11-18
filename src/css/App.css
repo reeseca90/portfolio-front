@@ -1,15 +1,29 @@
 .App {
-  text-align: center;
+  background-image: url("../images/galaxy_e.jpg");
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #cdcdcd;
 }
 
 #contentArea {
   box-sizing: border-box;
-  background-color: lightskyblue;
-  text-align: center;
+  background-color: rgba(30, 30, 30, 0.7);
   width: 100vw;
-  min-height: calc(100vh - 125px);
-  border-top: 1px solid black;
-  padding-top: 20px;
+  min-height: calc(100vh - 75px);
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 32px;
 }
 
 .toLeft {
@@ -18,6 +32,10 @@
 
 .toRight {
   margin-left: auto;
+}
+
+.clear {
+  clear: both;
 }
 
 /*# sourceMappingURL=App.css.map */

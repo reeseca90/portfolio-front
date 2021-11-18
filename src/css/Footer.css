@@ -4,7 +4,8 @@ footer {
   height: 50px;
   text-align: center;
   width: 100vw;
-  background-color: #5ba8ff;
+  background-color: rgba(80, 80, 80, 0.4);
+  backdrop-filter: blur(3px);
 }
 
 .footerPage {

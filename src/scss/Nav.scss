@@ -3,6 +3,7 @@
 header {
   background-color: var.$outer-bg-color;
   width: 100vw;
+  backdrop-filter: blur(var.$bgblur);
 } 
 
 .logo {
@@ -18,6 +19,10 @@ header {
   a {
     text-decoration: none;
     padding: 10px;
+    border-radius: 50%;
+  }
+  a:hover {
+    background-image: radial-gradient(ellipse at center, var.$nav-grad-color, var.$content-bg-color);
   }
   max-width: var.$page-max-width;
   margin-left: auto;

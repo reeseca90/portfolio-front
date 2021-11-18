@@ -12,7 +12,7 @@ const Projects = (props) => {
       </p>
       <p>
         Make sure you check out the <Link to='/blog/view/posts/'>blog</Link>!&nbsp;
-        I created it as a stand-alone back-end project, then moved it to this site and reworked many parts of it to improve its design.
+        I created it as a stand-alone back-end project then moved it to this site, reworking several parts of it to improve its design.
       </p>
     </div>
   )

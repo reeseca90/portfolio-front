@@ -1,17 +1,30 @@
 @use './variables' as var;
 
 .App {
-  text-align: center;
+  background-image: url("../images/galaxy_e.jpg");
+  color: var.$textcolor;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  color: var.$textcolor;
+}
+a:hover {
+  color: var.$linkcolor;
 }
 
 #contentArea {
   box-sizing: border-box;
   background-color: var.$content-bg-color;
-  text-align: center;
   width: 100vw;
-  min-height: calc(100vh - 125px);
-  border-top: 1px solid black;
-  padding-top: 20px;
+  min-height: calc(100vh - 75px);
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 32px;
 }
 
 .toLeft {
@@ -20,4 +33,8 @@
 
 .toRight {
   margin-left: auto;
+}
+
+.clear {
+  clear: both;
 }

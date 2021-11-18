@@ -1,6 +1,7 @@
 header {
-  background-color: #5ba8ff;
+  background-color: rgba(80, 80, 80, 0.4);
   width: 100vw;
+  backdrop-filter: blur(3px);
 }
 
 .logo {
@@ -20,6 +21,10 @@ header {
 .navPage a {
   text-decoration: none;
   padding: 10px;
+  border-radius: 50%;
+}
+.navPage a:hover {
+  background-image: radial-gradient(ellipse at center, rgba(138, 138, 138, 0.45), rgba(30, 30, 30, 0.7));
 }
 
 /*# sourceMappingURL=Nav.css.map */
