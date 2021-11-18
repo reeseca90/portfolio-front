@@ -16,7 +16,7 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 75px;
+  height: var.$nav-height;
   .highlight {
     text-decoration: none;
     padding: 5px;

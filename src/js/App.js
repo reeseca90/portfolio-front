@@ -56,7 +56,6 @@ function App() {
             <Route path='/blog/create/posts/:id/edit' element={<EditPost token={getToken()} />} />
           </Routes>
         </section>
-        <Footer />
       </BrowserRouter>
     </div>
   );
