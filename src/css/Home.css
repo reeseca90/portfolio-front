@@ -4,15 +4,17 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 350px;
 }
 
-img {
-  box-sizing: border-box;
-  width: 300px;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid rgba(80, 80, 80, 0.4);
-  margin: 25px;
+@media screen and (max-width: 540px) {
+  .homeSelfImg {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+  }
 }
 
 /*# sourceMappingURL=Home.css.map */

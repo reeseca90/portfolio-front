@@ -8,6 +8,7 @@ footer {
   width: 100vw;
   background-color: var.$outer-bg-color;
   backdrop-filter: blur(var.$bgblur);
+  min-width: var.$min-width;
 }
 
 .footerPage {

@@ -6,4 +6,21 @@
   max-width: var.$page-max-width;
   margin-left: auto;
   margin-right: auto;
+  min-width: var.$min-width;
+}
+
+@media screen and (max-width: var.$width-bp1) {
+  .aboutImg {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: var.$width-bp2) {
+  .aboutImg {
+    display: block;
+    float: none;
+    margin: -5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -2,15 +2,18 @@ header {
   background-color: rgba(80, 80, 80, 0.4);
   width: 100vw;
   backdrop-filter: blur(3px);
+  min-width: 350px;
 }
 
 .logo {
+  box-sizing: border-box;
   padding: 10px;
 }
 
 .navPage {
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -77,6 +80,29 @@ header {
 }
 #planet .planet-bg {
   background: radial-gradient(circle at center, #282828, black 80%);
+}
+
+@media screen and (max-width: 800px) {
+  .navPage {
+    flex-direction: column;
+    height: 105px;
+  }
+
+  .logo {
+    padding: 10px;
+    margin: -30px;
+  }
+
+  .navLinks {
+    margin: 0;
+    margin-top: -20px;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 540px) {
+  .navLinks a {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=Nav.css.map */

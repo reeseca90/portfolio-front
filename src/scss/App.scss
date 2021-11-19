@@ -5,6 +5,7 @@
   color: var.$textcolor;
   font-weight: 400;
   font-size: 18px;
+  min-width: var.$min-width;
 }
 
 a {
@@ -27,6 +28,15 @@ h1 {
   font-size: 32px;
 }
 
+img {
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var.$outer-bg-color;
+  margin: 25px;
+}
+
 .toLeft {
   margin-right: auto;
 }
@@ -45,4 +55,15 @@ h1 {
 
 .floatLeft {
   float: left;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: var.$width-bp1) {
+  #contentArea {
+    min-height: calc(100vh - var.$nav-height-med);
+  }
 }

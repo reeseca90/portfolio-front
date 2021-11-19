@@ -59,7 +59,7 @@ const UserOnePost = (props) => {
       <div className='viewPostCard'>
         <Link to='/blog/create/posts' className='link'>Back to All Posts</Link>
         <h1>{onePost.post.title}</h1>
-        <p>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+        <p className='date'>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
         {content.map((para) => {
           if (para!=='') {
             return (

@@ -4,15 +4,18 @@ header {
   background-color: var.$outer-bg-color;
   width: 100vw;
   backdrop-filter: blur(var.$bgblur);
+  min-width: var.$min-width;
 } 
 
 .logo {
+  box-sizing: border-box;
   padding: 10px;
 }
 
 .navPage {
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -78,5 +81,31 @@ header {
   }
   .planet-bg {
     background: radial-gradient(circle at center, rgb(40, 40, 40), rgb(0, 0, 0) 80%);
+  }
+}
+
+@media screen and (max-width: var.$width-bp1) {
+  .navPage {
+    flex-direction: column;
+    height: (var.$nav-height-med);
+  }
+
+  .logo {
+    padding: 10px;
+    margin: -30px;
+  }
+
+  .navLinks {
+    margin: 0;
+    margin-top: -20px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width :var.$width-bp2) {
+  .navLinks {
+    a {
+      font-size: 12px;
+    }
   }
 }

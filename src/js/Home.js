@@ -9,7 +9,7 @@ const Home = (props) => {
       <h1>Hi, I'm Craig</h1>
 
       <div>
-        <img className='floatRight' src={profPic} alt="Craig" />
+        <img className='floatRight homeSelfImg' src={profPic} alt="Craig" />
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
           I'm a full-stack developer looking for new opportunities, either fully-remote or in the Charleston, SC metro area.
         </p>
@@ -20,7 +20,7 @@ const Home = (props) => {
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
           Everything about this site was created by me; the front-end code, design, back-end routing and API endpoints.&nbsp;
-          feel free to reach out and ask me about any of the design choices, coding logic, or challenges with creating this site.
+          Feel free to reach out and ask me about any of the design choices, coding logic, or challenges with creating this site.
         </p>
 
         <p className='clear'>&nbsp;&nbsp;&nbsp;&nbsp;

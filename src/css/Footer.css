@@ -6,6 +6,7 @@ footer {
   width: 100vw;
   background-color: rgba(80, 80, 80, 0.4);
   backdrop-filter: blur(3px);
+  min-width: 350px;
 }
 
 .footerPage {

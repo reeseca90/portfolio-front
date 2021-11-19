@@ -4,6 +4,22 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 350px;
+}
+
+@media screen and (max-width: 800px) {
+  .aboutImg {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .aboutImg {
+    display: block;
+    float: none;
+    margin: -5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=About.css.map */
