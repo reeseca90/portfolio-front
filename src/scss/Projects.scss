@@ -14,3 +14,175 @@
   width: auto;
   float: right;
 }
+
+#battleshipSS {
+  width: 200px;
+  height: auto;
+  float: right;
+}
+
+#battleshipArea {
+  margin-left: auto;
+  margin-right: auto;
+
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+  }
+  
+  header {
+    text-align: center;
+    background-color: black;
+    padding-top: 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #headText {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: monospace;
+    color: white;
+  }
+  
+  button {
+    width: 200px;
+    height: 40px;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(97, 97, 97);
+    border: 2px solid white;
+    border-radius: 8px;
+  }
+  button:active{
+    transform: translateY(2px);
+  }
+  
+  main {
+    box-sizing: border-box;
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 97vw;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    margin-top: 40px;
+    min-width: 400px;
+  }
+  
+  #gameOverText {
+    margin-top: 40px;
+    color: red;
+    font-size: 124px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+    text-align: center;
+  }
+  
+  .board {
+    display: flex;
+    border: 1px solid black;
+  }
+  
+  .box {
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    background-color: rgb(85, 85, 85);
+  }
+  .boxHit {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    border: 1px solid black;
+  }
+  .boxMiss {
+    width: 32px;
+    height: 32px;
+    background-color: green;
+    border: 1px solid black;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: system-ui;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+  }
+  
+  #createdBy {
+    font-size: 16px;
+    margin-bottom: -20px;
+  }
+}
+
+@media screen and (max-width: var.$width-bp1) {
+  #battleshipArea {
+    #headText {
+      font-size: 36px;
+    }
+    main {
+      flex-direction: column;
+      padding-bottom: 60px;
+      gap: 0;
+    }
+    #gameOverText {
+      font-size: 72px;
+      margin-top: -40px;
+      margin-bottom: 48px;
+    }
+    section {
+      min-width: 300px;
+      gap: 8px;
+      padding: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: var.$width-bp2) {
+  #battleshipArea {
+    #headText {
+      font-size: 24px;
+    }
+    #gameOverText {
+      font-size: 60px;
+      margin-top: -40px;
+      margin-bottom: 60px;
+    }
+    .box {
+      width: 28px;
+      height: 28px;
+    }
+    .boxHit {
+      width: 28px;
+      height: 28px;
+    }
+    .boxMiss {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import '../css/Projects.css';
 import { Link } from 'react-router-dom';
 import memgame from '../images/memgame-screen.jpg';
+import battleship from '../images/battleship.jpg';
 
 const Projects = (props) => {
 
@@ -26,6 +27,16 @@ const Projects = (props) => {
           what the score was, when the game ended, and when to reset the score. <Link to='memory-game' className='center'>Try it out here</Link>; the directions are in the header of the program!
         </p>
       </div>
+
+      <div>
+        <Link to='battleship/'><img src={battleship} alt='Battleship game screenshot' id='battleshipSS' /></Link>
+        <p>
+          <Link to='battleship/'>Battleship</Link> is a classic game, and creating this version required a lot of planning and interaction between a lot of different objects. I learned a lot from this project about&nbsp;
+          how to properly use event handlers, and especially how useful the default event is. It also took a while to iron out the bugs and ensure that things like double shots and&nbsp;
+          overlapping ship placement couldn't happen. To play, simply click on the 'AI Board' to shoot at that block; sink all five ships (two two-space ships, and a three, four, and&nbsp;
+          five-space ship) to win. Each board is randomly populated with the ships when loading the game. Click 'Start New Game' at any time to reload the boards.
+        </p>
+      </div> 
     </div>
   )
 }

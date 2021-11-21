@@ -16,6 +16,7 @@ import CreatePost from '../js/blog/CreatePost';
 import UserOnePost from '../js/blog/UserOnePost';
 import EditPost from '../js/blog/EditPost';
 import MemGame from '../projects/memory-game/src/Display';
+import Bship from '../projects/battleship/Bship';
 
 function getToken() {
   const token = localStorage.getItem('token');
@@ -47,6 +48,7 @@ function App() {
             <Route exact path='/about' element={<About />} />
             <Route exact path='/projects' element={<Projects />} />
             <Route exact path='/projects/memory-game' element={<MemGame />} />
+            <Route exact path='/projects/battleship/' element={<Bship />} />
             <Route exact path='/experience' element={<Experience />} />
             <Route exact path='/contact' element={<Contact />} />
             <Route exact path='/blog/login' element={<Login setToken={setToken} />} />

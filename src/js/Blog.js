@@ -30,8 +30,8 @@ const Blog = (props) => {
           if (post.published) {
             return (
               <li key={post._id} className='listFlex'>
-                <div><Link to={post._id}>{post.title}</Link></div>
-                <div>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</div>
+                <div className='blogAlignLeft'><Link to={post._id}>{post.title}</Link></div>
+                <div>{moment(post.createDate, moment.ISO_8601).format("MMM Do YYYY, h:mm a")}</div>
               </li>
             );
           }
