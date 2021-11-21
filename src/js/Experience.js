@@ -12,9 +12,9 @@ const Experience = (props) => {
       <div>
         <h3>College and Self-Learning, Oct 2020 - present. Check out some of the <Link to='/projects'>Projects I've created</Link>.</h3>
         <p>
-          I began to learn using the website&nbsp;
-          <a href='https://www.theodinproject.com/'>The Odin Project</a> as a guide on what to look at next. I supplemented&nbsp;
-          that by just trying and figuring out how to do certain things on my own that I was curious about. One simple example of that&nbsp;
+          I began college courses in Fall 2020, and supplemented that using the website&nbsp;
+          <a href='https://www.theodinproject.com/'>The Odin Project</a> as a guide on what to look at next. I also continued to&nbsp;
+          just try and figure out how to do certain things on my own that I was curious about. One simple example of that&nbsp;
           is the logo for this site: a planet with rings rendered completely with CSS!
         </p>
       </div>

@@ -2,7 +2,7 @@
 
 header {
   background-color: var.$outer-bg-color;
-  width: 100vw;
+  max-width: 100vw;
   backdrop-filter: blur(var.$bgblur);
   min-width: var.$min-width;
 } 
@@ -61,11 +61,11 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse farthest-side at center, rgba(0, 0, 0, 0) 50%, black 55%, rgb(20, 20, 20) 75%, black 90%, rgba(0, 0, 0, 0) 100%);
+    background: radial-gradient(ellipse farthest-side at center, rgba(0, 0, 0, 0) 50%, rgb(120, 120, 120) 55%, rgb(20, 20, 20) 75%, rgb(120, 120, 120) 90%, rgba(0, 0, 0, 0) 100%);
     transform: rotateX(75deg);
   }
   .planet {
-    background: green;
+    background: black;
     width: 45px;
     height: 45px;
     position: absolute;
@@ -80,7 +80,7 @@ header {
     clip: rect(22px, 45px, 45px, 0px);
   }
   .planet-bg {
-    background: radial-gradient(circle at center, rgb(40, 40, 40), rgb(0, 0, 0) 80%);
+    background: radial-gradient(circle at center, rgb(200, 200, 200), rgb(0, 0, 0) 80%);
   }
 }
 

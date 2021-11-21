@@ -25,13 +25,13 @@ const Blog = (props) => {
   return (
     <div className='blogPage'>
       <h1>Craig's Blog</h1>
-      <ul>
+      <ul className='readerList'>
         {posts.map((post) => {
           if (post.published) {
             return (
-              <li key={post._id} className='readerList'>
-                <span><Link to={post._id}>{post.title}</Link></span>
-                <span>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</span>
+              <li key={post._id} className='listFlex'>
+                <div><Link to={post._id}>{post.title}</Link></div>
+                <div>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</div>
               </li>
             );
           }

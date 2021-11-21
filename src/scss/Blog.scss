@@ -8,14 +8,13 @@
   margin-right: auto;
   gap: 20px;
   text-align: center;
-  min-width: var.$min-width;
 }
 
 ul {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: (var.$page-max-width * .75);
+  width: 75%;
   padding: 0;
 }
 
@@ -42,9 +41,15 @@ h4 {
 
 .readerList {
   display: flex;
+  flex-direction: column;
   max-width: var.$page-max-width;
   margin-left: auto;
   margin-right: auto;
+  justify-content: space-between;
+}
+
+.listFlex {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -82,7 +87,7 @@ h4 {
     margin-top: -40px;
   }
   form {
-    width: (var.$page-max-width * .75);
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     input {
@@ -142,4 +147,14 @@ button:hover {
 }
 button:active {
   transform: translateY(1px);
+}
+
+@media screen and (max-width: 660px) {
+  ul {
+    width: 75%;
+  }
+  .listFlex {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }

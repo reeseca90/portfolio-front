@@ -1,5 +1,6 @@
 import '../css/Projects.css';
 import { Link } from 'react-router-dom';
+import memgame from '../images/memgame-screen.jpg';
 
 const Projects = (props) => {
 
@@ -15,6 +16,16 @@ const Projects = (props) => {
         First, make sure you check out the <Link to='/blog/view/posts/'>blog</Link>!&nbsp;
         I created it from scratch as a stand-alone back-end project then reworked several components of it and moved it to this site.
       </p>
+
+      <div>
+        <Link to='memory-game'><img src={memgame} alt='Memory Game Screenshot' id='memgameSS' /></Link>
+        <p>
+          This 'memory game' is a simple concept, but a great exercise in using state in React. Essentially, the program has three different components that need to talk to each other.&nbsp;
+          However, the program structure is a ladder; the Display component renders the Game component which renders the Card component, which complicates handling state because 'Card'&nbsp;
+          needs to tell 'Display' what the state of the score is! Ultimately I used prop-drilling to send a callback from the top level to the bottom, which could tell the top level&nbsp;
+          what the score was, when the game ended, and when to reset the score. <Link to='memory-game' className='center'>Try it out here</Link>; the directions are in the header of the program!
+        </p>
+      </div>
     </div>
   )
 }

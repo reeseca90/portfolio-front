@@ -1,0 +1,98 @@
+@use '../scss/variables' as var;
+
+#display {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: var.$min-width;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  header {
+    max-width: 100vw;
+    min-width: var.$min-width;
+  }
+  .memHeader {
+    box-sizing: border-box;
+    max-width: var.$page-max-width;
+    display: flex;
+    gap: 24px;
+    font-size: 18px;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    width: 195px;
+    height: 195px;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+}
+
+#header-left {
+  font-size: 36px;
+  font-weight: bold;  
+}
+
+#scores {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 24px;
+}
+
+#cardsArea {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  border-radius: 15px;
+  height: 300px;
+  width: 220px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  background-color: #000083;
+  font-size: 32px;
+}
+
+
+
+@media screen and (max-width: var.$width-bp2) {
+  #cardsArea {
+    gap: 2px;
+  }
+  .memHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card {
+    width: 165px;
+    height: 225px;
+    font-size: 24px;
+    margin: 2px;
+  } 
+  #display {
+    img {
+      width: 144px;
+      height: 144px;
+    }
+  }
+}

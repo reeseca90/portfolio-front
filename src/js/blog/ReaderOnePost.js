@@ -82,7 +82,7 @@ const ReaderOnePost = (props) => {
           <label htmlFor='name'>Name: </label>
           <input type='text' name='name' required={true} onChange={commentUser} value={comUser} />
           <label htmlFor='content'>Comment: </label>
-          <textarea rows='4' name='content' onChange={commentContent} value={comCont} />
+          <textarea rows='6' name='content' onChange={commentContent} value={comCont} />
           <button type='button' onClick={postComment}>Submit</button>
         </form>
       </div>
