@@ -20,13 +20,18 @@ const Dashboard = (props) => {
       <h1>Blog Page Dashboard</h1>
       <Link to='/blog/create/posts/new' className='dashLink'>Create New Post</Link>
 
-      <ul>
+      <ul className='userDashList'>
         {posts.map((post) => {
           return (
-            <li key={post._id} className='userDashList'>
-              <span><Link to={post._id}>{post.title}</Link>&nbsp;</span>
-              <span>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}&nbsp;</span>
-              <span>Published: {post.published ? 'Yes' : 'No'}</span>
+            <li key={post._id} className='listFlex'>
+              {post.thumb && 
+                <img className='blogThumb' src={post.thumb.base64} alt={post.thumb.name} />
+              }
+              <div className='blogListText alignLeft'>
+                <div><Link to={post._id}>{post.title}</Link>&nbsp;</div>
+                <div>{moment(post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}&nbsp;</div>
+                <div>Published: {post.published ? 'Yes' : 'No'}</div>
+              </div>
             </li>
           );
         })}

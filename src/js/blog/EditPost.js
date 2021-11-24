@@ -11,6 +11,8 @@ const CreatePost = (props) => {
   const [cont, setCont] = useState('');
   const [pub, setPub] = useState(false);
   const [_id, set_id] = useState('');
+  const [thumb, setThumb] = useState({});
+  const [image, setImage] = useState({});
 
   const tokenHeader = { headers: { 'Authorization': `Bearer ${props.token}` }};
 
@@ -18,8 +20,11 @@ const CreatePost = (props) => {
   useEffect(() => {
     axios.get('/api/blog/create/posts/' + id + '/edit' , tokenHeader)
       .then((res) => {
+        console.log(res);
         setTitle(res.data.post.title);
         setCont(res.data.post.content);
+        setThumb(res.data.post.thumb);
+        setImage(res.data.post.image);
         set_id(res.data.post._id);
       })
       .catch(err => console.log(err))
@@ -31,6 +36,8 @@ const CreatePost = (props) => {
       title: title, 
       content: cont, 
       published: pub,
+      thumb: thumb,
+      image: image,
       _id: _id
     }, tokenHeader)
       .then(() => {
@@ -55,6 +62,38 @@ const CreatePost = (props) => {
     setCont(e.target.value);
   }
 
+  const handleThumb = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const fileInfo = {
+        name: file.name,
+        type: file.type,
+        size: Math.round(file.size / 1000) + ' kB',
+        base64: reader.result
+      };
+
+      setThumb(fileInfo);
+    }
+  }
+
+  const handleImage = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const fileInfo = {
+        name: file.name,
+        type: file.type,
+        size: Math.round(file.size / 1000) + ' kB',
+        base64: reader.result
+      };
+
+      setImage(fileInfo);
+    }
+  }
+
   const handlePub = (e) => {
     if (e.target.value == 'publish') {
       setPub(true);
@@ -75,6 +114,12 @@ const CreatePost = (props) => {
 
         <label htmlFor='content'>Content: </label>
         <textarea rows='8' name='content' required={true} onChange={handleContent} value={cont} />
+
+        <label htmlFor='thumb'>Update Thumbnail: </label>
+        <input type='file' name='thumb' className='fileUpload' onChange={handleThumb} />
+
+        <label htmlFor='blogImage'>Update image for post: </label>
+        <input type='file' name='blogImage' className='fileUpload' onChange={handleImage} />
 
         <label htmlFor='published'>Publish Now: </label>
         <input type='checkbox' name='published' value='publish' onChange={handlePub} />

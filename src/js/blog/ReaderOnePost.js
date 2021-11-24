@@ -48,6 +48,9 @@ const ReaderOnePost = (props) => {
       <div className='viewPostCard'>
         <h1>{onePost.post.title}</h1>
         <p className='date'>{moment(onePost.post.createDate, moment.ISO_8601).format("MMMM Do YYYY, h:mm:ss a")}</p>
+        {onePost.post.image && 
+          <img src={onePost.post.image.base64} alt={onePost.post.image.name} />
+        }
         {content.map((para) => {
           if (para!=='') {
             return (

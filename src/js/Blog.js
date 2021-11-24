@@ -30,8 +30,13 @@ const Blog = (props) => {
           if (post.published) {
             return (
               <li key={post._id} className='listFlex'>
-                <div className='blogAlignLeft'><Link to={post._id}>{post.title}</Link></div>
-                <div>{moment(post.createDate, moment.ISO_8601).format("MMM Do YYYY, h:mm a")}</div>
+                {post.thumb && 
+                  <img className='blogThumb' src={post.thumb.base64} alt={post.thumb.name} />
+                }
+                <div className='blogListText alignLeft'>
+                  <div><Link to={post._id}>{post.title}</Link></div>
+                  <div>{moment(post.createDate, moment.ISO_8601).format("MMM Do YYYY, h:mm a")}</div>
+                </div>
               </li>
             );
           }

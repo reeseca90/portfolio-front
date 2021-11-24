@@ -35,6 +35,7 @@ h4 {
 
 .userDashList {
   display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -52,7 +53,20 @@ h4 {
 
 .listFlex {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.listFlex .blogListText {
+  display: flex;
+  flex-direction: column;
+}
+.listFlex .blogThumb {
+  box-sizing: border-box;
+  width: auto;
+  height: 125px;
+  border-radius: 50%;
+  border: 2px solid rgba(80, 80, 80, 0.4);
+  margin: 2px;
 }
 
 .login {
@@ -89,6 +103,14 @@ h4 {
   font-size: 14px;
   margin-top: -40px;
 }
+.viewPostCard img {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid rgba(80, 80, 80, 0.4);
+  margin: 0;
+}
 .viewPostCard form {
   width: 75%;
   margin-left: auto;
@@ -123,6 +145,9 @@ h4 {
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+}
+.createPostCard form .fileUpload {
+  width: auto;
 }
 
 .newComment {
