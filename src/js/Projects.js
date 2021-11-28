@@ -19,6 +19,10 @@ const Projects = (props) => {
       </p>
 
       <div>
+        <Link to='weather'>Weather App</Link>
+      </div>
+
+      <div>
         <Link to='memory-game'><img src={memgame} alt='Memory Game Screenshot' id='memgameSS' /></Link>
         <p>
           This 'memory game' is a simple concept, but a great exercise in using state in React. Essentially, the program has three different components that need to talk to each other.&nbsp;
