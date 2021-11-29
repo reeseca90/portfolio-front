@@ -126,6 +126,105 @@
   margin-bottom: -20px;
 }
 
+#weatherArea {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#weatherArea .weatherHeader {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  color: white;
+  font-weight: bold;
+}
+#weatherArea #headerLeft {
+  font-size: 36px;
+  font-style: italic;
+  padding: 5px;
+  margin-right: auto;
+}
+#weatherArea #headerRight {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 100%;
+}
+#weatherArea #headerRight input {
+  width: 100px;
+}
+#weatherArea #headerRight > button {
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(80, 80, 80, 0.4);
+  border-radius: 5px;
+  margin: 0;
+}
+#weatherArea #headerRight > button:hover {
+  background-color: rgba(138, 138, 138, 0.45);
+}
+#weatherArea #headerRight > button:active {
+  transform: translateY(1px);
+}
+#weatherArea #weatherDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  background-color: rgba(30, 30, 30, 0.7);
+}
+#weatherArea #currentWeatherCard {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-height: 300px;
+  color: white;
+  background-color: rgba(138, 138, 138, 0.45);
+  border: 1px solid white;
+  margin: 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+#weatherArea #locationName {
+  font-size: 36px;
+  font-weight: bold;
+}
+#weatherArea #temperatureContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 180px;
+  height: 50px;
+  justify-content: center;
+  padding: 4px;
+}
+#weatherArea .bigTemperature {
+  font-size: 48px;
+}
+#weatherArea .smallTemperature {
+  margin-left: auto;
+}
+#weatherArea #currentWeatherCard img {
+  width: 100px;
+  height: 100px;
+  margin: -10px;
+}
+#weatherArea #currentWeatherCard > p {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0;
+}
+#weatherArea .weatherFooter {
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   #battleshipArea #headText {
     font-size: 36px;
@@ -144,6 +243,18 @@
     min-width: 300px;
     gap: 8px;
     padding: 4px;
+  }
+
+  #weatherArea .weatherHeader {
+    flex-direction: column;
+  }
+  #weatherArea #headerLeft {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+  }
+  #weatherArea .weatherFooter {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 540px) {
@@ -166,6 +277,10 @@
   #battleshipArea .boxMiss {
     width: 28px;
     height: 28px;
+  }
+
+  #weatherArea #currentWeatherCard {
+    transform: scale(0.7);
   }
 }
 

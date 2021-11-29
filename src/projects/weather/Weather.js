@@ -1,28 +1,27 @@
 import weatherModule from './script';
-import './weatherStyle.css';
 
 const Weather = () => {
 
 
   return (
-    <div>
+    <div id='weatherArea'>
 
       <div className='weatherHeader'>
         <div id="headerLeft">
           SimplyWeather
         </div>
-        <div id="headerRight">
+        <form id="headerRight" onSubmit={weatherModule.getCurrentWeatherData}>
           <label htmlFor="inputBox">Enter a city, city and state, or ZIP code: </label>
           <input type="text" id="inputBox" />
-          <button id="inputButton" onClick={weatherModule.getCurrentWeatherData}>Get Weather</button>
-        </div>
+          <button type="submit" id="inputButton">Get Weather</button>
+        </form>
       </div>
     
       <main id="weatherDisplay">
     
       </main>
     
-      <div>
+      <div className='weatherFooter'>
         Uses the <a href="https://openweathermap.org/">Open Weather Map</a> API
       </div>
 

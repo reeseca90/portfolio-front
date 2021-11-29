@@ -44,7 +44,9 @@ const weatherModule = (function() {
   };
 
   // get input, determine input type, call correct API function
-  const getCurrentWeatherData = async function() {
+  const getCurrentWeatherData = async function(e) {
+    e.preventDefault();
+
     const userInput = getInput();
     const callID = determineCall(userInput);
 
@@ -149,7 +151,7 @@ const weatherModule = (function() {
     temperatures.appendChild(highTemp);
 
     const weatherIcon = document.createElement('img');
-    weatherIcon.src = __dirname + `icons/${processedCurrentWeather.weatherIcon}.png`;
+    weatherIcon.src = `/weatherIcons/${processedCurrentWeather.weatherIcon}.png`;
     currentWeatherCard.appendChild(weatherIcon);
 
     const weatherDescription = document.createElement('p');
