@@ -10,11 +10,17 @@
 #memgameSS {
   height: 200px;
   width: auto;
-  float: right;
+  float: left;
 }
 
 #battleshipSS {
   width: 200px;
+  height: auto;
+  float: right;
+}
+
+#weatherSS {
+  width: 180px;
   height: auto;
   float: right;
 }

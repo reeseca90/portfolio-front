@@ -15,7 +15,7 @@ const Home = (props) => {
         </p>
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;
-          My major focus areas are React front-end (HTML, CSS, JavaScript) and Node.js back-end (Express), using MongoDB (NoSQL) for data storage. I also have experience in with Java, Test-Driven Development (using Jest), and RESTful API development.
+          My major focus areas are React front-end (HTML, CSS, JavaScript) and Node.js back-end (Express), using MongoDB (NoSQL) for data storage. I also have experience with Java, Test-Driven Development (using Jest), and RESTful API development.
         </p>
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;

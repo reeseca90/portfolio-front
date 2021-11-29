@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import fs from 'fs';
 
 const CreatePost = (props) => {
   const navigate = useNavigate();
@@ -37,6 +36,7 @@ const CreatePost = (props) => {
   }
 
   const handlePub = (e) => {
+    // eslint-disable-next-line eqeqeq
     if (e.target.value == 'publish') {
       setPub(true);
     }

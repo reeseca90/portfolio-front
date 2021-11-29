@@ -2,7 +2,6 @@ import '../css/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Nav from '../js/Nav';
-import Footer from '../js/Footer';
 import Home from '../js/Home';
 import About from '../js/About';
 import Projects from '../js/Projects';
@@ -31,7 +30,7 @@ function getToken() {
 
 function App() {
 
-  const [tokenHook, setTokenHook] = useState();
+  const [, setTokenHook] = useState();
 
   function setToken(token) {
     localStorage.setItem('token', token.token);

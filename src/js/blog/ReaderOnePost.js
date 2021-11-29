@@ -2,10 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import moment from 'moment';
-import { useNavigate } from "react-router";
 
 const ReaderOnePost = (props) => {
-  const navigate = useNavigate();
 
   let location = useLocation().pathname.split('/');
   let id = location[4];

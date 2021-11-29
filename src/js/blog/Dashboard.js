@@ -1,5 +1,5 @@
 import '../../css/Blog.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
@@ -13,6 +13,7 @@ const Dashboard = (props) => {
     axios.get('/api/blog/create/posts', tokenHeader)
       .then(data => setPosts([...data.data.posts]))
       .catch(err => console.log(err))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

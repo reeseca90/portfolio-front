@@ -28,6 +28,7 @@ const CreatePost = (props) => {
         set_id(res.data.post._id);
       })
       .catch(err => console.log(err))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitEdit = () => {
@@ -95,6 +96,7 @@ const CreatePost = (props) => {
   }
 
   const handlePub = (e) => {
+    // eslint-disable-next-line eqeqeq
     if (e.target.value == 'publish') {
       setPub(true);
     }

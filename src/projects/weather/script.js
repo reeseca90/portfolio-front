@@ -69,21 +69,21 @@ const weatherModule = (function() {
 
   // make API calls
   const getCurrentWeatherByZip = async function(userInput) {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${userInput[0]}&appid=1d1c2901189455b47575e403708d4d25`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${userInput[0]}&appid=${process.env.REACT_APP_weatherAPI}`);
     const receivedData = await response.json();
 
     localStorage.setItem('currentWeatherJSON', JSON.stringify(receivedData));
   };
 
   const getCurrentWeatherByCity = async function(userInput) {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInput[0]}&appid=1d1c2901189455b47575e403708d4d25`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInput[0]}&appid=${process.env.REACT_APP_weatherAPI}`);
     const receivedData = await response.json();
 
     localStorage.setItem('currentWeatherJSON', JSON.stringify(receivedData));
   };
 
   const getCurrentWeatherByCityState = async function(userInput) {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInput[0]},${userInput[1]},usa&appid=1d1c2901189455b47575e403708d4d25`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInput[0]},${userInput[1]},usa&appid=${process.env.REACT_APP_weatherAPI}`);
     const receivedData = await response.json();
 
     localStorage.setItem('currentWeatherJSON', JSON.stringify(receivedData));

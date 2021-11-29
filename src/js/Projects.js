@@ -2,6 +2,7 @@ import '../css/Projects.css';
 import { Link } from 'react-router-dom';
 import memgame from '../images/memgame-screen.jpg';
 import battleship from '../images/battleship.jpg';
+import weatherScreen from '../images/weather-screen.jpg';
 
 const Projects = (props) => {
 
@@ -15,11 +16,18 @@ const Projects = (props) => {
       </p>
       <p>
         First, make sure you check out the <Link to='/blog/view/posts/'>blog</Link>!&nbsp;
-        I created it from scratch as a stand-alone back-end project then reworked several components of it and moved it to this site.
+        I created it myself as a stand-alone back-end project, then reworked several components of it for use here. It functions by making API calls to a Node.js server, which&nbsp;
+        in turn retrieves data from a MongoDB and passes it back to the front-end for rendering and display. 
       </p>
 
       <div>
-        <Link to='weather'>Weather App</Link>
+        <Link to='weather'><img src={weatherScreen} alt='Weather App Screenshot' id='weatherSS' /></Link>
+        <p>
+          While the final application looks simple, this was the first useful application of an external API that I created. Using the Open Weather Map API, the app will search by city or ZIP&nbsp;
+          code to find the current weather. The API specifies three different calls depending on what the user input is, so this application will take the user input and determine whether the&nbsp;
+          input was a ZIP, city, or city/state, then make the appropriate call using that input. Because it all goes through an external source, the search is not always successful for city&nbsp;
+          or city/state searches. The data is returned in JSON format, then split out for display in a readable form. <Link to='weather'>Check it out here</Link>.
+        </p>
       </div>
 
       <div>
