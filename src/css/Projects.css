@@ -231,6 +231,127 @@
   text-align: center;
 }
 
+#pdfGenArea {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  max-width: 800px;
+  align-items: center;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pdfGenArea p {
+  text-align: center;
+  font-size: 16px;
+}
+#pdfGenArea button {
+  margin: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pdfGenArea .section {
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 600px;
+  border-bottom: 2px solid rgba(138, 138, 138, 0.45);
+}
+#pdfGenArea .oneLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+#pdfGenArea .oneLine li {
+  margin-right: auto;
+  margin-left: 10px;
+}
+#pdfGenArea .oneLine button {
+  width: 100px;
+  margin: 0;
+}
+#pdfGenArea form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#pdfGenArea form button {
+  width: 150px;
+}
+#pdfGenArea .inputSectionHeader {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+#pdfGenArea .inputArea {
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+}
+#pdfGenArea .inputArea > input {
+  width: 400px;
+  margin-left: auto;
+}
+#pdfGenArea textarea {
+  width: 400px;
+  margin-left: auto;
+}
+#pdfGenArea .outputSection {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+#pdfGenArea .sectionHeader {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 8px;
+  margin-bottom: 24px;
+  text-decoration: underline;
+}
+#pdfGenArea .pushRight {
+  margin-left: auto;
+}
+#pdfGenArea ul {
+  list-style: none;
+}
+#pdfGenArea #finalView {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  border: 1px solid black;
+}
+#pdfGenArea #generalOutput {
+  text-align: center;
+}
+#pdfGenArea .place {
+  font-size: 18px;
+  font-weight: bold;
+}
+#pdfGenArea #skillsOutput {
+  margin-top: 16px;
+}
+#pdfGenArea .flex {
+  display: flex;
+  flex-direction: column;
+}
+#pdfGenArea .eduSection {
+  display: flex;
+  flex-direction: column;
+}
+#pdfGenArea .eduSection button {
+  width: 150px;
+}
+#pdfGenArea .eduList {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+#pdfGenArea .buttons button {
+  margin: 20px;
+}
+
 @media screen and (max-width: 800px) {
   #battleshipArea #headText {
     font-size: 36px;

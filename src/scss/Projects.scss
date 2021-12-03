@@ -254,6 +254,149 @@
   }
 }
 
+#pdfGenArea {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  max-width: var.$page-max-width;
+  align-items: center;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  button {
+    margin: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section {
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 600px;
+    border-bottom: 2px solid var.$nav-grad-color;
+  }
+
+  .oneLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    li {
+      margin-right: auto;
+      margin-left: 10px;
+    }
+    button {
+      width: 100px;
+      margin: 0;
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    button {
+      width: 150px;
+    }
+  }
+  
+  .inputSectionHeader {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .inputArea {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .inputArea > input {
+    width: 400px;
+    margin-left: auto;  
+  }
+  
+  textarea {
+    width: 400px;
+    margin-left: auto;
+    
+  }
+  
+  .outputSection {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  .sectionHeader {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 8px;
+    margin-bottom: 24px;
+    text-decoration: underline;
+  }
+  
+  .pushRight {
+    margin-left: auto;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  #finalView {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    border: 1px solid black;
+  }
+  
+  #generalOutput {
+    text-align: center;
+  }
+  
+  .place {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #skillsOutput {
+    margin-top: 16px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eduSection {
+    display: flex;
+    flex-direction: column;
+    button {
+      width: 150px;
+    }
+  }
+  
+  .eduList {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+  }
+  
+  .buttons button {
+    margin: 20px;
+  }
+}
+
 @media screen and (max-width: var.$width-bp1) {
   #battleshipArea {
     #headText {

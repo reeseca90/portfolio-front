@@ -21,6 +21,15 @@ const Projects = (props) => {
       </p>
 
       <div>
+        <p>
+          This <Link to='pdf-gen'>PDF generator</Link> originated as a small project to automatically generate a resume and display it on the page, all on a React front-end.&nbsp;
+          I adapted it to my portfolio as a proof-of-concept for sending user input from React to a Node.js back-end for processing into a PDF, and then returning it to the user as a download.&nbsp;
+          Functionally, the generated PDF could be sent via email or saved in a database as well, or the data could be processed into a variety of formats and saved another way.
+        </p>
+        
+      </div>
+
+      <div>
         <Link to='weather'><img src={weatherScreen} alt='Weather App Screenshot' id='weatherSS' /></Link>
         <p>
           While the final application looks simple, this was the first useful application of an external API that I created. Using the Open Weather Map API, the app will search by city or ZIP&nbsp;

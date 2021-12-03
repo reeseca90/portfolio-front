@@ -1,11 +1,10 @@
-form {
+.login {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
   gap: 5px;
 }
-
-button {
+.login button {
   margin: 20px;
 }
 
