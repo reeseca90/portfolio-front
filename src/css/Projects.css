@@ -383,6 +383,44 @@
   #weatherArea .weatherFooter {
     font-size: 12px;
   }
+
+  #pdfGenArea {
+    max-width: 800px;
+    padding: 4px;
+  }
+  #pdfGenArea .section {
+    max-width: 800px;
+  }
+  #pdfGenArea .inputArea {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 100vw;
+    text-align: center;
+  }
+  #pdfGenArea .inputArea input {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+  }
+  #pdfGenArea .inputArea textarea {
+    max-width: 80vw;
+  }
+  #pdfGenArea .oneLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+  }
+  #pdfGenArea .oneLine li {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  #pdfGenArea .oneLine button {
+    width: 100px;
+    margin: 0;
+  }
 }
 @media screen and (max-width: 540px) {
   #battleshipArea #headText {
@@ -408,6 +446,14 @@
 
   #weatherArea #currentWeatherCard {
     transform: scale(0.7);
+  }
+
+  #pdfGenArea {
+    max-width: 540px;
+    padding: 4px;
+  }
+  #pdfGenArea .section {
+    max-width: 540px;
   }
 }
 
