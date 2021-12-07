@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// requires a login function passed from parent
 const LoginForm = (props) => {
 
   const [username, setUserName] = useState('');
@@ -16,6 +17,7 @@ const LoginForm = (props) => {
   const submitForm = (e) => {
     e.preventDefault();
 
+    // returns an object with username and password to parent function for processing as credentials and submitting
     props.submit({ username, password });
   }
 

@@ -1,5 +1,4 @@
-import LoginForm from './LoginForm';
-
+import { LoginForm } from '@craigreesedev/craigreesedev-react-components';
 import { useNavigate } from 'react-router';
 
 const Login = (props) => {
@@ -21,7 +20,6 @@ const Login = (props) => {
     props.setToken(newToken);
     navigate('/blog/create/posts');
   }
-
 
   return (
     <LoginForm submit={submit} />
