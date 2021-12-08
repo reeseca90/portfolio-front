@@ -9,6 +9,8 @@ const Blog = (props) => {
   const navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
+  const [postCount, setPostCount] = useState(0);
+  const [pageNum, setPageNum] = useState(1);
 
   useEffect(() => {
     if (props.token) {
@@ -17,10 +19,33 @@ const Blog = (props) => {
   })
 
   useEffect(() => {
-    axios.get('/api/blog/view/posts')
-      .then(data => setPosts([...data.data.posts]))
+    axios.get('/api/blog/view/posts', { params: { pageNum: pageNum } })
+      .then((data) => {
+        setPosts([...data.data.posts]);
+        setPostCount(data.data.count);
+      })
       .catch(err => console.log(err))
-  }, []);
+  }, [pageNum]);
+  
+  const pageIncrement = (e) => {
+    const newPageNumber = parseInt(pageNum) + parseInt(e.target.value);
+    
+    if (newPageNumber > 0 && newPageNumber <= (Math.ceil(postCount / 5))) {
+      setPageNum(parseInt(pageNum) + parseInt(e.target.value));
+    }
+  }
+
+  const pageChange = (e) => {
+    setPageNum(e.target.value);
+  }
+
+  const genPageNumbers = () => {
+    const pageNumArray = [];
+    for (let i = 1; i <= Math.ceil(postCount / 5); i++) {
+      pageNumArray.push(i);
+    }
+    return pageNumArray;
+  }
 
   return (
     <div className='blogPage'>
@@ -41,7 +66,18 @@ const Blog = (props) => {
             );
           }
         })}
-      </ul> 
+      </ul>
+
+      <ul id="pageList">
+        <p>Viewing 5 posts per page</p>
+        <li><button value={-1} onClick={pageIncrement}>&lt;</button></li>
+        {genPageNumbers().map((num) => {
+          return (
+            <li key={num}><button value={num} onClick={pageChange}>{num}</button></li>
+          );
+        })}
+        <li><button value={1} onClick={pageIncrement}>&gt;</button></li>
+      </ul>
     </div>
   )
 }

@@ -184,6 +184,24 @@ button:active {
   transform: translateY(1px);
 }
 
+#pageList {
+  list-style-type: none;
+  overflow: hidden;
+  p {
+    font-size: 12px;
+  }
+  li {
+    font-weight: bold;
+    display: inline;
+    button {
+      width: 35px;
+      background-color: transparent;
+      border-color: white;
+      color: white;
+    }
+  }
+}
+
 @media screen and (max-width: 660px) {
   ul {
     width: 75%;

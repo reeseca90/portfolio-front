@@ -6,20 +6,47 @@ import moment from 'moment';
 
 const Dashboard = (props) => {
   const [posts, setPosts] = useState([]);
-
-  const tokenHeader = { headers: { 'Authorization': `Bearer ${props.token}` }};
+  const [postCount, setPostCount] = useState(0);
+  const [pageNum, setPageNum] = useState(1);
 
   useEffect(() => {
-    axios.get('/api/blog/create/posts', tokenHeader)
-      .then(data => setPosts([...data.data.posts]))
+    axios.get('/api/blog/create/posts', { 
+      headers: { 'Authorization': `Bearer ${props.token}` },
+      params: { pageNum: pageNum } 
+    })
+      .then((data) => {
+        setPosts([...data.data.posts])
+        setPostCount(data.data.count);
+      })
       .catch(err => console.log(err))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pageNum]);
+
+  const pageIncrement = (e) => {
+    const newPageNumber = parseInt(pageNum) + parseInt(e.target.value);
+    
+    if (newPageNumber > 0 && newPageNumber <= (Math.ceil(postCount / 5))) {
+      setPageNum(parseInt(pageNum) + parseInt(e.target.value));
+    }
+  }
+
+  const pageChange = (e) => {
+    setPageNum(e.target.value);
+  }
+
+  const genPageNumbers = () => {
+    const pageNumArray = [];
+    for (let i = 1; i <= Math.ceil(postCount / 5); i++) {
+      pageNumArray.push(i);
+    }
+    return pageNumArray;
+  }
 
   return (
     <div className='blogPage'>
       <h1>Blog Page Dashboard</h1>
-      <Link to='/blog/create/posts/new' className='dashLink'>Create New Post</Link>
+      {props.token &&
+        <Link to='/blog/create/posts/new' className='dashLink'>Create New Post</Link>
+      }
 
       <ul className='userDashList'>
         {posts.map((post) => {
@@ -37,6 +64,17 @@ const Dashboard = (props) => {
           );
         })}
       </ul> 
+
+      <ul id="pageList">
+        <p>Viewing 5 posts per page</p>
+        <li><button value={-1} onClick={pageIncrement}>&lt;</button></li>
+        {genPageNumbers().map((num) => {
+          return (
+            <li key={num}><button value={num} onClick={pageChange}>{num}</button></li>
+          );
+        })}
+        <li><button value={1} onClick={pageIncrement}>&gt;</button></li>
+      </ul>
     </div>
 
   )
