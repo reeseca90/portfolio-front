@@ -14,21 +14,23 @@ const Experience = (props) => {
       <a href='/api/resume' download>Download my Resume</a>
 
       <Carousel showThumbs={false} >
-        <div key='slide1' style={{ padding: 20 }}>
-          <h3>College and Self-Learning, Oct 2020 - present.<br />Check out some of the <Link to='/projects'>Projects I've created</Link>.</h3>
+        <div key='slide1'  style={{ padding: 20 }}>
+          <h3>Electrical Technician and Operator - Nuclear Power Training Unit, US Navy, Sept 2010 – Feb 2013</h3>
           <p>
-            I began college courses in Fall 2020, and supplemented that using the website&nbsp;
-            <a href='https://www.theodinproject.com/'>The Odin Project</a> as a guide on what to look at next. I also continued to&nbsp;
-            just try and figure out how to do certain things on my own that I was curious about.
+            I was retained at NPTU Charleston after completing nuclear power program training as a junior staff instructor, where&nbsp;
+            I worked as a hands-on instructor for students in the program as well as an electrical technician and operator. 
           </p>
         </div>
 
         <div key='slide2'  style={{ padding: 20 }}>
-          <h3>Maintenance Electrician, Crane Area Lead - JW Aluminum, Aug 2019 – Oct 2020</h3>
+          <h3>Reactor Electrical Leading Petty Officer - USS John C. Stennis, US Navy, Feb 2013 – Nov 2016</h3>
           <p>
-            At JW Aluminum, I began as a shift electrician, responsible for emergent repairs to any electrical equipment in the&nbsp;
-            rolled aluminum production process. I was moved to the Crane department, having never worked on a crane prior to this job,&nbsp;
-            after demonstrating exceptional technical ability, and more importantly the ability to quickly learn new technology.
+            Aboard CVN-74, I began as a technician, but was quickly promoted to new roles. First as Zone Manager, where I interfaced with&nbsp;
+            Puget Sound Naval Shipyard and other shipboard departments to plan and coordinate maintenance during a shipyard maintenance period.&nbsp;
+            Next, I was Work Center Supervisor, responsible for the planning and execution of maintenance on electrical components&nbsp;
+            in the reactor plan, as well as training junior sailors in maintenance execution and best practices. Last, I was assigned&nbsp;
+            as Leading Petty Officer, responsible for all aspects of the electrical systems in #1 propulsion plant, as well as over 30&nbsp;
+            sailors training, qualifications, and professional development.
           </p>
         </div>
 
@@ -43,22 +45,20 @@ const Experience = (props) => {
         </div>
 
         <div key='slide4'  style={{ padding: 20 }}>
-          <h3>Reactor Electrical Leading Petty Officer - USS John C. Stennis, US Navy, Feb 2013 – Nov 2016</h3>
+          <h3>Maintenance Electrician, Crane Area Lead - JW Aluminum, Aug 2019 – Oct 2020</h3>
           <p>
-            Aboard CVN-74, I began as a technician, but was quickly promoted to new roles. First as Zone Manager, where I interfaced with&nbsp;
-            Puget Sound Naval Shipyard and other shipboard departments to plan and coordinate maintenance during a shipyard maintenance period.&nbsp;
-            Next, I was Work Center Supervisor, responsible for the planning and execution of maintenance on electrical components&nbsp;
-            in the reactor plan, as well as training junior sailors in maintenance execution and best practices. Last, I was assigned&nbsp;
-            as Leading Petty Officer, responsible for all aspects of the electrical systems in #1 propulsion plant, as well as over 30&nbsp;
-            sailors training, qualifications, and professional development.
+            At JW Aluminum, I began as a shift electrician, responsible for emergent repairs to any electrical equipment in the&nbsp;
+            rolled aluminum production process. I was moved to the Crane department, having never worked on a crane prior to this job,&nbsp;
+            after demonstrating exceptional technical ability, and more importantly the ability to quickly learn new technology.
           </p>
         </div>
 
-        <div key='slide5'  style={{ padding: 20 }}>
-          <h3>Electrical Technician and Operator - Nuclear Power Training Unit, US Navy, Sept 2010 – Feb 2013</h3>
+        <div key='slide5' style={{ padding: 20 }}>
+          <h3>College and Self-Learning, Oct 2020 - present.<br />Check out some of the <Link to='/projects'>Projects I've created</Link>.</h3>
           <p>
-            I was retained at NPTU Charleston after completing nuclear power program training as a junior staff instructor, where&nbsp;
-            I worked as a hands-on instructor for students in the program as well as an electrical technician and operator. 
+            I began college courses in Fall 2020, and supplemented that using the website&nbsp;
+            <a href='https://www.theodinproject.com/'>The Odin Project</a> as a guide on what to look at next. I also continued to&nbsp;
+            just try and figure out how to do certain things on my own that I was curious about.
           </p>
         </div>
       </Carousel>
