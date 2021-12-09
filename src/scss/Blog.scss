@@ -8,6 +8,23 @@
   margin-right: auto;
   gap: 20px;
   text-align: center;
+  button {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var.$content-bg-color;
+    background-color: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  button:hover {
+    background-color: rgb(80, 80, 80);
+  }
+  button:active {
+    transform: translateY(1px);
+  }
 }
 
 ul {
@@ -99,6 +116,23 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  button {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var.$content-bg-color;
+    background-color: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  button:hover {
+    background-color: rgb(80, 80, 80);
+  }
+  button:active {
+    transform: translateY(1px);
+  }
   .date {
     text-align: center;
     font-size: 14px;
@@ -135,6 +169,23 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  button {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var.$content-bg-color;
+    background-color: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  button:hover {
+    background-color: rgb(80, 80, 80);
+  }
+  button:active {
+    transform: translateY(1px);
+  }
   form {
     width: var.$page-max-width;
     margin-left: auto;
@@ -164,24 +215,6 @@ h4 {
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-button {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid var.$content-bg-color;
-  background-color: lightgray;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 5px;
-}
-button:hover {
-  background-color: rgb(80, 80, 80);
-}
-button:active {
-  transform: translateY(1px);
 }
 
 #pageList {

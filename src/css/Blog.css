@@ -7,6 +7,23 @@
   gap: 20px;
   text-align: center;
 }
+.blogPage button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(30, 30, 30, 0.7);
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+.blogPage button:hover {
+  background-color: #505050;
+}
+.blogPage button:active {
+  transform: translateY(1px);
+}
 
 ul {
   margin-left: auto;
@@ -98,6 +115,23 @@ h4 {
   margin-right: auto;
   justify-content: space-between;
 }
+.viewPostCard button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(30, 30, 30, 0.7);
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+.viewPostCard button:hover {
+  background-color: #505050;
+}
+.viewPostCard button:active {
+  transform: translateY(1px);
+}
 .viewPostCard .date {
   text-align: center;
   font-size: 14px;
@@ -134,6 +168,23 @@ h4 {
   margin-right: auto;
   justify-content: space-between;
 }
+.createPostCard button {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(30, 30, 30, 0.7);
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+.createPostCard button:hover {
+  background-color: #505050;
+}
+.createPostCard button:active {
+  transform: translateY(1px);
+}
 .createPostCard form {
   width: 800px;
   margin-left: auto;
@@ -162,26 +213,6 @@ h4 {
 .newComment button {
   margin-right: auto;
   margin-left: auto;
-}
-
-button {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid rgba(30, 30, 30, 0.7);
-  background-color: lightgray;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-button:hover {
-  background-color: #505050;
-}
-
-button:active {
-  transform: translateY(1px);
 }
 
 #pageList {

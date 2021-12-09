@@ -246,9 +246,22 @@
   font-size: 16px;
 }
 #pdfGenArea button {
+  width: 100px;
   margin: 12px;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid rgba(30, 30, 30, 0.7);
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+#pdfGenArea button:hover {
+  background-color: #505050;
+}
+#pdfGenArea button:active {
+  transform: translateY(1px);
 }
 #pdfGenArea .section {
   box-sizing: border-box;
